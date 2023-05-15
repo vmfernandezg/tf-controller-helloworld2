@@ -1,0 +1,36 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: helloworld-tf
+spec:
+  interval: 1m
+  url: https://github.com/vmfernandezg/tf-controller-helloworld2
+  ref:
+    branch: main
+---
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: helloworld-tf
+spec:
+  path: ./terraform
+  approvePlan: ""
+  disableDriftDetection: true 
+  interval: 10m
+  sourceRef:
+    kind: GitRepository
+    name: helloworld-tf
+  writeOutputsToSecret:
+    name: terraform-outputs
+  #varsFrom:
+  #- kind: ConfigMap
+    #name: myconfigmap
+    #varsKeys:
+    #- subscription_id
+    #- tenant_id
+    #- client_id
+    #- client_secret
+  varsFrom:
+  - kind: Secret
+    name: mysecret
