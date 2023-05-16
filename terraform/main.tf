@@ -14,8 +14,8 @@ module "webapp" {
   resource_group_name = azurerm_resource_group.mi_resource_group.name
   location            = azurerm_resource_group.mi_resource_group.location
   #tier                = "Standard"
-  tier                = "Premium"
+  tier                = "PremiumV3"
   #size                = "S1"
-  size                = "P1V3"
+  size                = "P1v3"
   capacity            = "3"
 }
