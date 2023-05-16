@@ -31,5 +31,9 @@ resource "azurerm_app_service" "mi_app_service" {
   #site_config {
     #number_of_workers = "3"               # IMPORTANTE PERF
   #}
+  
+  app_settings = {
+    "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
+  }
 
 }
