@@ -1,6 +1,11 @@
 resource "azurerm_resource_group" "mi_resource_group" {
   name     = "prueba-terraform"
   location = "North Europe"
+  
+  tags = {
+      Module = "Linux App Service Plan"
+      Version = "1.0"
+  }
 }
 
 module "webapp" {

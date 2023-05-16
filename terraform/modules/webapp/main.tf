@@ -10,11 +10,6 @@ resource "azurerm_app_service_plan" "mi_app_service_plan" {
   zone_redundant      = true              # IMPORTANTE HA
   #per_site_scaling    = true              # IMPORTANTE PERF
 
-  tags = {
-    Module = "Linux App Service Plan"
-    Version = "1.0"
-  }
-
   sku {
     tier      = var.tier
     size      = var.size
