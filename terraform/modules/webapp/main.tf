@@ -31,7 +31,6 @@ resource "azurerm_app_service" "mi_app_service" {
 
   site_config {
     always_on         = true
-    minimum_tls_version = "1.2"
     #number_of_workers = "3"               # IMPORTANTE PERF
   }
   
