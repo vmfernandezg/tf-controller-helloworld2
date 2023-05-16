@@ -37,4 +37,8 @@ resource "azurerm_app_service" "mi_app_service" {
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
   }
 
+  tags = {
+      Module = "Linux App Service"
+      Version = "1.0"
+  }
 }
