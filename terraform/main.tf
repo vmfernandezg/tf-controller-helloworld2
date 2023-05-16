@@ -3,8 +3,8 @@ resource "azurerm_resource_group" "mi_resource_group" {
   location = "North Europe"
   
   tags = {
-      Module = "Linux App Service Plan"
-      Version = "1.0"
+      Environment = "Terraform Getting Started"
+      Team = "DevOps"
   }
 }
 
