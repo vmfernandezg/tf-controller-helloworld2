@@ -28,9 +28,10 @@ resource "azurerm_app_service" "mi_app_service" {
   resource_group_name = var.resource_group_name
   app_service_plan_id = azurerm_app_service_plan.mi_app_service_plan.id
 
-  #site_config {
+  site_config {
+    always_on         = true
     #number_of_workers = "3"               # IMPORTANTE PERF
-  #}
+  }
   
   app_settings = {
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
