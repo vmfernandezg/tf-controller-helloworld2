@@ -27,9 +27,11 @@ resource "azurerm_app_service" "mi_app_service" {
   location            = var.location
   resource_group_name = var.resource_group_name
   app_service_plan_id = azurerm_app_service_plan.mi_app_service_plan.id
+  https_only            = true
 
   site_config {
     always_on         = true
+    minimum_tls_version = "1.2"
     #number_of_workers = "3"               # IMPORTANTE PERF
   }
   
