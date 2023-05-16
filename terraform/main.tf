@@ -22,7 +22,7 @@ module "webapp" {
 
 #  Deploy code from a public GitHub repo
 resource "azurerm_app_service_source_control" "sourcecontrol" {
-  app_id             = azurerm_web_app.webapp.id
+  app_id             = azurerm_app_service_plan.mi_app_service_plan.id
   repo_url           = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
   branch             = "master"
   use_manual_integration = true
