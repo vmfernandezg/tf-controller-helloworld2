@@ -27,7 +27,7 @@ spec:
     #spec:
       #envFrom:
       #- secretRef:
-          #name: mysecret
+          #name: mysecret # MO ACTUALIZA A VARIABLE SUBSCRIPTION_ID
       #env:
       #- name: KEYVAULT_SECRET
         #valueFrom:
