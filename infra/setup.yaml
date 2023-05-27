@@ -23,11 +23,11 @@ spec:
     name: helloworld-tf
   writeOutputsToSecret:
     name: terraform-outputs
-  #runnerPodTemplate:
-    #spec:
-      #envFrom:
-      #- secretRef:
-          #name: mysecret
+  runnerPodTemplate:
+    spec:
+      envFrom:
+      - secretRef:
+          name: mysecret
       #env:
       #- name: KEYVAULT_SECRET
         #valueFrom:
@@ -49,6 +49,6 @@ spec:
     #- tenant_id
     #- client_id
     #- client_secret
-  varsFrom:
-  - kind: Secret
-    name: mysecret
+  #varsFrom:
+  #- kind: Secret
+    #name: mysecret
