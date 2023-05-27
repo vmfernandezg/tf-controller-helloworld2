@@ -7,17 +7,6 @@ spec:
   containers:
     - name: mypod
       image: nginx:latest
-      #env:
-        #- name: SUBSCRIPTION
-          #valueFrom:
-            #secretKeyRef:
-              #name: mysecret
-              #key: subscription_id
-        #- name: TENANT
-          #valueFrom:
-            #secretKeyRef:
-              #name: mysecret
-              #key: tenant_id
       volumeMounts:
       - name: secrets-store-inline
         mountPath: "/mnt/secrets-store"
