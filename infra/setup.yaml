@@ -33,7 +33,7 @@ spec:
         valueFrom:
           secretKeyRef:
             name: mysecret
-            key: suscription_id
+            key: subscription_id
       #volumes:
       #- name: secrets-store-inline
         #csi:
