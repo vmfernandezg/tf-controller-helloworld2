@@ -23,17 +23,17 @@ spec:
     name: helloworld-tf
   writeOutputsToSecret:
     name: terraform-outputs
-  #runnerPodTemplate:
-    #spec:
+  runnerPodTemplate:
+    spec:
       #envFrom:
       #- secretRef:
           #name: mysecret # MO ACTUALIZA A VARIABLE SUBSCRIPTION_ID
-      #env:
-      #- name: KEYVAULT_SECRET
-        #valueFrom:
-          #secretKeyRef:
-            #name: mysecret
-            #key: suscripcion_id
+      env:
+      - name: KEYVAULT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: suscripcion_id
       #volumes:
       #- name: secrets-store-inline
         #csi:
