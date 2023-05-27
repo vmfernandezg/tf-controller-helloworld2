@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: mypod
 spec:
-  serviceAccountName: mysa
+  serviceAccountName: tf-runner
   containers:
     - name: mypod
       image: nginx:latest
