@@ -28,6 +28,19 @@ spec:
       envFrom:
       - secretRef:
           name: mysecret
+      env:
+      - name: KEYVAULT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: key-vault-secret
+            key: suscripcion_id
+      volumes:
+      - name: secrets-store-inline
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: "mysecretproviderclass"
   #varsFrom:
   #- kind: ConfigMap
     #name: myconfigmap
