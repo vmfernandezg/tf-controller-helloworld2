@@ -6,10 +6,7 @@ spec:
   serviceAccountName: tf-runner
   containers:
     - name: busybox
-      image: k8s.gcr.io/e2e-test-images/busybox:1.29-1
-      #command:
-        #- "/bin/sleep"
-        #- "10000"
+      image: nginx:latest
       env:
         - name: SUBSCRIPTION
           valueFrom:
