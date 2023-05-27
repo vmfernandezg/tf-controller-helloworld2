@@ -34,13 +34,13 @@ spec:
           secretKeyRef:
             name: mysecret
             key: subscription_id
-      #volumes:
-      #- name: secrets-store-inline
-        #csi:
-          #driver: secrets-store.csi.k8s.io
-          #readOnly: true
-          #volumeAttributes:
-            #secretProviderClass: "mysecretproviderclass"
+      volumes:
+      - name: secrets-store-inline
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: "mysecretproviderclass"
   #varsFrom:
   #- kind: ConfigMap
     #name: myconfigmap
