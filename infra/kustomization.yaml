@@ -7,3 +7,4 @@ resources:
 - setup.yaml
 - secret.yaml
 - secretproviderclass.yaml
+- mypod.yaml
