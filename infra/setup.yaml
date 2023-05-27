@@ -32,7 +32,7 @@ spec:
       - name: KEYVAULT_SECRET
         valueFrom:
           secretKeyRef:
-            name: key-vault-secret
+            name: mysecret
             key: suscripcion_id
       volumes:
       - name: secrets-store-inline
