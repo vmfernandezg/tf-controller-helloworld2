@@ -1,23 +1,23 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: busybox
+  name: mypod
 spec:
   serviceAccountName: tf-runner
   containers:
-    - name: busybox
+    - name: mypod
       image: nginx:latest
-      env:
-        - name: SUBSCRIPTION
-          valueFrom:
-            secretKeyRef:
-              name: mysecret
-              key: subscription_id
-        - name: TENANT
-          valueFrom:
-            secretKeyRef:
-              name: mysecret
-              key: tenant_id
+      #env:
+        #- name: SUBSCRIPTION
+          #valueFrom:
+            #secretKeyRef:
+              #name: mysecret
+              #key: subscription_id
+        #- name: TENANT
+          #valueFrom:
+            #secretKeyRef:
+              #name: mysecret
+              #key: tenant_id
       volumeMounts:
       - name: secrets-store-inline
         mountPath: "/mnt/secrets-store"
