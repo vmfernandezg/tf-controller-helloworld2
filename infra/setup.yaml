@@ -23,7 +23,7 @@ spec:
     name: helloworld-tf
   writeOutputsToSecret:
     name: terraform-outputs
-  runnerPodTemplate:
+  #runnerPodTemplate:
     #spec:
       #envFrom:
       #- secretRef:
