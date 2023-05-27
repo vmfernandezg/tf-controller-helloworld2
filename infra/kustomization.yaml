@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: terraform-02
 resources:
 - rbac.yaml
-#- secret.yaml
-- secretproviderclass.yaml
-- mypod.yaml
+- secret.yaml
+#- secretproviderclass.yaml
+#- mypod.yaml
 - setup.yaml
