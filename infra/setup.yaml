@@ -28,12 +28,12 @@ spec:
       envFrom:
       - secretRef:
           name: mysecret
-      env:
-      - name: KEYVAULT_SECRET
-        valueFrom:
-          secretKeyRef:
-            name: mysecret
-            key: suscripcion_id
+      #env:
+      #- name: KEYVAULT_SECRET
+        #valueFrom:
+          #secretKeyRef:
+            #name: mysecret
+            #key: suscripcion_id
       #volumes:
       #- name: secrets-store-inline
         #csi:
