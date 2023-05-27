@@ -5,5 +5,4 @@ namespace: terraform-02
 resources:
 - rbac.yaml
 - secretproviderclass.yaml
-#- pod.yaml
 - setup.yaml
