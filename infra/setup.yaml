@@ -23,13 +23,13 @@ spec:
     kind: GitRepository
     name: helloworld-tf
   backendConfig:
-	customConfiguration: |
-		backend "azurerm" {
-		  resource_group_name  = "RG-WE-P-TF-01"
-		  storage_account_name = "azureaksbackup"
-		  container_name       = "tfstate"
-		  key                  = "helloworld.tfstate"
-		}
+    customConfiguration: |
+      backend "azurerm" {
+        resource_group_name  = "RG-WE-P-TF-01"
+        storage_account_name = "azureaksbackup"
+        container_name       = "tfstate"
+        key                  = "helloworld.tfstate"
+      }
   writeOutputsToSecret:
     name: terraform-outputs
   runnerPodTemplate:
